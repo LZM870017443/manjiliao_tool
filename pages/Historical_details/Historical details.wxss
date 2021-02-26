@@ -1,0 +1,22 @@
+/* pages/Historical_details/Historical details.wxss */
+.hisy_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45rpx;
+  font-weight: 800;
+  border-bottom: 2rpx solid black;
+  background-color: #cfb971;
+  height: auto;
+}
+.hisy_img {
+  width: 100vw;
+}
+.hisy_img image {
+  width: 100%;
+}
+.hisy_content {
+  font-size: 40rpx;
+  font-weight: 500;
+  line-height: 80rpx;
+}

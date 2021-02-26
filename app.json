@@ -1,0 +1,54 @@
+{
+    "pages": [
+        "pages/Story/Story",
+        "pages/picture/picture",
+        "pages/music/music",
+        "pages/tool/tool",
+        "pages/Historical_details/Historical details"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#F7D200",
+        "navigationBarTitleText": "漫寂寥的工具箱",
+        "navigationBarTextStyle": "black"
+    },
+
+    "tabBar": {
+        "color": "",
+        "selectedColor": "",
+        "backgroundColor": "",
+        "position": "bottom",
+        "borderStyle": "black",
+        "list": [{
+                "pagePath": "pages/Story/Story",
+                "text": "段子",
+                "iconPath": "/icon/tubiao1.png",
+                "selectedIconPath": "/icon/tubiao9.png"
+            }, {
+                "pagePath": "pages/picture/picture",
+                "text": "图片",
+                "iconPath": "/icon/tubiao2.png",
+                "selectedIconPath": "/icon/tubiao9.png"
+            },
+            {
+                "pagePath": "pages/music/music",
+                "text": "音乐",
+                "iconPath": "/icon/tubiao11.png",
+                "selectedIconPath": "/icon/tubiao9.png"
+            },
+            {
+                "pagePath": "pages/tool/tool",
+                "text": "工具集",
+                "iconPath": "/icon/tubiao13.png",
+                "selectedIconPath": "/icon/tubiao9.png"
+            }
+        ]
+    },
+
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "useExtendedLib": {
+        "weui": true
+    }
+
+}

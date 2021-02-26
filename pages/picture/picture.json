@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "mp-tabs": "@miniprogram-component-plus/tabs",
+        "Refresh": "../../Component/Refresh/Refresh"
+    },
+    "navigationBarTitleText": "精美壁纸"
+}

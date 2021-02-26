@@ -1,0 +1,7 @@
+<!-- pages/Historical_details/Historical details.wxml -->
+<view class="hisy_title">{{hisDeatil.title}}</view>
+<view class="hisy_img" wx:for="{{hisDeatil.picUrl}}" wx:key="{{index}}">
+    <!-- <image wx:if="{{hisDeatil.picUrl[0].url}}" src="{{hisDeatil.picUrl[0].url}}" /> -->
+    <image  src="{{item.url?item.url:lz_load}}" mode="widthFix" />
+</view>
+<view class="hisy_content">{{hisDeatil.content}}</view>

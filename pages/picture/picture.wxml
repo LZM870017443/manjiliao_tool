@@ -1,0 +1,21 @@
+
+<view class="page">
+
+  <mp-tabs 
+    tabs="{{tabs}}" 
+    activeTab="{{activeTab}}" 
+    swiperClass="weui-tabs-swiper"
+    bindtabclick="onTabClick"
+    bindchange="onChange"
+  >
+    <block wx:for="{{tabs}}" wx:key="title">
+      <view class="tab-content"  data-index="{{index+1}}" slot="tab-content-{{index}}" >
+        <!-- <image src="{{item.img}}" mode="widthFix"></image> -->
+        <view class="item-title" >
+          <image class="image" src="{{imageurl}}" mode="aspectFit" bindlongpress="saveImage" data-url="{{imageurl}}" ></image>
+        </view>
+      </view>     
+    </block>
+  </mp-tabs>
+   <Refresh indexz="{{indexz}}" bind:imageurl="changimageurl"/>
+  </view>

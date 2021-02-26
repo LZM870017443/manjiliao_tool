@@ -1,0 +1,101 @@
+/* pages/tool/tool.wxss */
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.page .getClassifications {
+  margin-top: 50rpx;
+}
+.page .getClassifications .Classifications_title {
+  text-align: center;
+  font-weight: 900;
+}
+.page .getClassifications .Classificationsbtn {
+  display: flex;
+}
+.page .getClassifications .Classificationsbtn .inputname {
+  flex: 4;
+  border-radius: 10rpx;
+  background: darkgrey;
+  height: auto;
+}
+.page .getClassifications .Classificationsbtn .getClassifications_btn {
+  flex: 2;
+  text-align: center;
+  border-radius: 10rpx;
+  background-color: #b9eea5;
+  height: auto;
+}
+.page .getClassifications .Classifications {
+  border: 1rpx solid black;
+  width: 100vw;
+  height: 100rpx;
+  font-size: 60rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+.page .LunarCalendar {
+  margin-top: 10rpx;
+}
+.page .LunarCalendar .LunarCalendar_title {
+  text-align: center;
+  font-weight: 900;
+}
+.page .LunarCalendar .LunarCalendar_today {
+  display: block;
+  border: 2rpx solid black;
+  line-height: 35rpx;
+  font-size: 35rpx;
+  text-align: center;
+}
+.page .acrostic {
+  padding-top: 50rpx;
+}
+.page .acrostic .acrostic_title {
+  text-align: center;
+  font-weight: 900;
+}
+.page .acrostic .acrostic_input {
+  display: block;
+  margin: 0 auto;
+  width: 95vw;
+  border-radius: 20rpx;
+  background: darkgrey;
+  height: 60rpx;
+}
+.page .acrostic .btn1 {
+  display: flex;
+  margin-top: 10rpx;
+}
+.page .acrostic .btn1 .btn1_1 {
+  flex: 1;
+}
+.page .acrostic .btn1 .btn1_2 {
+  flex: 1rpx;
+  padding-left: 30;
+}
+.page .acrostic .btn2 {
+  margin-top: 10rpx;
+  display: flex;
+}
+.page .acrostic .btn2 .btn2_1 {
+  flex: 1;
+}
+.page .acrostic .btn2 .btn2_2 {
+  flex: 1;
+}
+.page .acrostic .create {
+  width: 100vw;
+}
+.page .acrostic .acrostic_content {
+  display: block;
+  border: 1rpx solid black;
+  font-size: 45rpx;
+  text-align: center;
+  height: auto;
+}
+.page .contact {
+  width: 100vw;
+}

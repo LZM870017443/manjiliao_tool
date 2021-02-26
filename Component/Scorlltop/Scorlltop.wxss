@@ -1,0 +1,10 @@
+.scorlltop {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20rpx;
+}
+.scorlltop .image {
+  height: 60rpx;
+  width: 60rpx;
+}

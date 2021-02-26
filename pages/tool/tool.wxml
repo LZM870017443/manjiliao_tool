@@ -1,0 +1,44 @@
+<!-- pages/tool/tool.wxml -->
+<view class="page">
+    <view class="LunarCalendar">
+    <view class="LunarCalendar_title">1.今日农历</view>
+    <!-- <view class="LunarCalendar_today" style="white-space:pre-wrap" >{{LunarCalendars}}</view>  -->
+    <!-- user-select -->
+    <text class="" selectable="ture" class="LunarCalendar_today" space="false" decode="false">
+        {{LunarCalendars}}
+    </text>
+      
+</view>
+<view class="getClassifications">
+    <view class="Classifications_title">2.垃圾分类查询</view>
+    <view class="Classificationsbtn">
+        <input class="inputname" value="" type="text" placeholder-style="color:white" placeholder="请输入垃圾名" placeholder-class="input-placeholder" maxlength="140" focus="false" bindinput="getname"></input>
+        <view bind:tap="getClassifications" class="getClassifications_btn">查询</view>
+    </view>
+    <view class="Classifications">{{classifications}}</view>
+</view>
+<view class="acrostic">
+    <view class="acrostic_title">3.藏头诗</view>
+    <input type="text" maxlength="140" id="acrostic_input" placeholder="请输入内容" placeholder-style="color:white" class="acrostic_input" bindinput="inputacrostic"></input>
+    <view class="btn1">
+        <button class="btn1_1" size="default" type="primary"  hover-class="button-hover" bind:tap="cangtouwei" data-nun="1">藏头</button>
+        <button class="btn1_2" size="default" type="primary"  hover-class="button-hover" bind:tap="cangtouwei" data-nun="0">藏尾</button>
+    </view>
+        <view class="btn2">
+        <button class="btn2_1" size="default" type="default"  hover-class="button-hover" bind:tap="wuqiyan" data-num="5">五言</button>
+        <button class="btn2_2" size="default" type="default"  hover-class="button-hover" bind:tap="wuqiyan" data-num="7">七言</button>
+    </view>
+    <button class="create" size="default" type="primary" bind:tap="create">一键生成</button>
+    <!-- <view class="acrostic_content" style="white-space:pre-wrap">
+    {{acrostic}}
+    </view> -->
+    <text class="acrostic_content" selectable="ture" space="false" decode="false">
+         {{acrostic}}
+    </text>
+</view>
+<button class="contact" size="default" type="primary" plain="true"  open-type="contact" >
+    客服不可撩
+</button>
+  
+</view>
+  

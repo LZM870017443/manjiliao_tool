@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "Tabr": "../../Component/Tabr/Tabr",
+        "Scorlltop": "../../Component/Scorlltop/Scorlltop"
+    },
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": true
+}

@@ -1,0 +1,67 @@
+/* pages/Story/Story.wxss */
+.tabs .scroll {
+  height: 100vh;
+}
+.tabs .joke {
+  display: block;
+  width: 95vw;
+  height: auto;
+  background-color: #f0e9e5;
+  position: relative;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: 30rpx auto;
+  border-radius: 5%;
+  box-shadow: 6px 6px 4px #a8a7a7;
+  font-size: 40rpx;
+  text-indent: 2em;
+}
+.tabs .btn1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 200rpx;
+}
+.tabs .yan {
+  width: 100vw;
+  height: 50vh;
+  background-color: #a8a7a7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+}
+.tabs .dujitang {
+  width: 100vw;
+  height: 50vh;
+  background-color: #ff8989;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+}
+.tabs .todaytime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7c7777;
+  font-size: 40rpx;
+  font-weight: 800;
+  height: 100rpx;
+}
+.tabs .today {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40rpx;
+}
+.tabs .today_content {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border: 2rpx solid black;
+  height: 100rpx;
+  line-height: 100rpx;
+}

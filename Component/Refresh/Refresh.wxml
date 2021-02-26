@@ -1,0 +1,3 @@
+<view bindtap="getImagess" class="scorlltop">
+    <image class="image" src="../../icon/tubiao13.png" />
+</view>

@@ -1,0 +1,41 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "音乐页",
+          "pathName": "pages/music/music",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "历史i详情",
+          "pathName": "pages/Historical_details/Historical details",
+          "query": "e_id=2613",
+          "scene": null
+        },
+        {
+          "name": "图片壁纸",
+          "pathName": "pages/picture/picture",
+          "query": "e_id=2613",
+          "scene": null
+        },
+        {
+          "name": "工具集",
+          "pathName": "pages/tool/tool",
+          "scene": null
+        }
+      ]
+    }
+  }
+}
