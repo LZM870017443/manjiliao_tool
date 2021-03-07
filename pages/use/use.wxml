@@ -1,0 +1,18 @@
+<view class="use">
+    <view class="Scorlltop">
+        1.
+        <image class="image" src="../../icon/tubiao8.png" />
+        <view>看到这个图没？在中间的小图，这个是返回顶部用的</view>
+    </view>
+    <view class="Refresh">
+        2.
+        <image class="image" src="../../icon/tubiao13.png" />
+        <view>看到这个图没？在中间的小图，是不是感觉和上面那个图差不多，不过这个是刷新用的</view>
+    </view>
+    <view>
+        <text>3.笑话大全可以下拉刷新，上拉加载，长按复制
+4.壁纸可以左右滑动，长按可以保存到相册
+5.文本几乎可以长按复制
+6.随机一言点击除文字外的地方可以刷新，长按文字可以复制</text>
+    </view>
+</view>

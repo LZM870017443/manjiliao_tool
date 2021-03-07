@@ -33,6 +33,66 @@
         {
           "name": "工具集",
           "pathName": "pages/tool/tool",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "垃圾分类",
+          "pathName": "pages/garbage/garbage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "黄历",
+          "pathName": "pages/almanac/almanac",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "成语查询",
+          "pathName": "pages/idiom/idiom",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的",
+          "pathName": "pages/user/user",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "关于我们",
+          "pathName": "pages/about/about",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "今日历史",
+          "pathName": "pages/history/history",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/user/user",
+          "pathName": "pages/use/use",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "轻加密",
+          "pathName": "pages/encryption/encryption",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "黑屏时间",
+          "pathName": "pages/Clock/Clock",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "BMI",
+          "pathName": "pages/BMI/BMI",
           "scene": null
         }
       ]

@@ -2,13 +2,24 @@
     "pages": [
         "pages/Story/Story",
         "pages/picture/picture",
-        "pages/music/music",
         "pages/tool/tool",
-        "pages/Historical_details/Historical details"
+        "pages/Historical_details/Historical details",
+        "pages/almanac/almanac",
+        "pages/garbage/garbage",
+        "pages/idiom/idiom",
+        "pages/user/user",
+        "pages/about/about",
+        "pages/yiyan/yiyan",
+        "pages/history/history",
+        "pages/use/use",
+        "pages/Clock/Clock",
+        "pages/BMI/BMI"
+
+
     ],
     "window": {
         "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#F7D200",
+        "navigationBarBackgroundColor": "#fff",
         "navigationBarTitleText": "漫寂寥的工具箱",
         "navigationBarTextStyle": "black"
     },
@@ -21,19 +32,13 @@
         "borderStyle": "black",
         "list": [{
                 "pagePath": "pages/Story/Story",
-                "text": "段子",
+                "text": "笑话",
                 "iconPath": "/icon/tubiao1.png",
                 "selectedIconPath": "/icon/tubiao9.png"
             }, {
                 "pagePath": "pages/picture/picture",
-                "text": "图片",
+                "text": "壁纸",
                 "iconPath": "/icon/tubiao2.png",
-                "selectedIconPath": "/icon/tubiao9.png"
-            },
-            {
-                "pagePath": "pages/music/music",
-                "text": "音乐",
-                "iconPath": "/icon/tubiao11.png",
                 "selectedIconPath": "/icon/tubiao9.png"
             },
             {
@@ -41,11 +46,15 @@
                 "text": "工具集",
                 "iconPath": "/icon/tubiao13.png",
                 "selectedIconPath": "/icon/tubiao9.png"
+            },
+            {
+                "pagePath": "pages/user/user",
+                "text": "我的",
+                "iconPath": "/icon/tubiao11.png",
+                "selectedIconPath": "/icon/tubiao9.png"
             }
         ]
     },
-
-    "style": "v2",
     "sitemapLocation": "sitemap.json",
     "useExtendedLib": {
         "weui": true

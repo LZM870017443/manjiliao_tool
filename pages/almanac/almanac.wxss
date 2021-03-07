@@ -1,0 +1,118 @@
+/* pages/almanac/almanac.wxss */
+.LunarCalendar .up {
+  background-color: #f7f1e3;
+  text-align: center;
+}
+.LunarCalendar .up .yangli {
+  font-weight: 600;
+}
+.LunarCalendar .up .day {
+  color: #940505;
+  font-size: 300rpx;
+  font-weight: 900;
+}
+.LunarCalendar .up .week {
+  color: #940505;
+  font-size: 40rpx;
+  font-weight: 500;
+}
+.LunarCalendar .up .nongli {
+  font-weight: 600;
+}
+.LunarCalendar .down {
+  display: flex;
+}
+.LunarCalendar .down .yi {
+  flex: 1;
+  border-right: 1rpx solid #757575;
+}
+.LunarCalendar .down .yi .yi_shi .yi_shi_title {
+  font-size: 100rpx;
+  color: #940505;
+  text-align: center;
+  background-color: #e2e2e2;
+}
+.LunarCalendar .down .yi .yi_shi .yi_shi_conent {
+  background-color: #f8f8f8;
+  height: 300rpx;
+  font-size: 35rpx;
+}
+.LunarCalendar .down .yi .taishen {
+  background-color: #757575;
+  color: #e6f5e7;
+}
+.LunarCalendar .down .yi .yishen {
+  display: flex;
+}
+.LunarCalendar .down .yi .yishen .jishenyiqu {
+  flex: 1;
+}
+.LunarCalendar .down .yi .yishen .jishenyiqu .jishenyiqu_title {
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: 500;
+  background-color: #e2e2e2;
+  border-right: 1rpx solid #757575;
+}
+.LunarCalendar .down .yi .yishen .jishenyiqu .jishenyiqu_conent {
+  border-right: 1rpx solid #757575;
+}
+.LunarCalendar .down .yi .caishen {
+  flex: 1;
+}
+.LunarCalendar .down .yi .caishen .caishen_title {
+  font-size: 29rpx;
+  font-weight: 500;
+  background-color: #e2e2e2;
+  height: 65rpx;
+}
+.LunarCalendar .down .yi .caishen .caishen_conent {
+  font-size: 29rpx;
+}
+.LunarCalendar .down .ji {
+  flex: 1;
+}
+.LunarCalendar .down .ji .ji_shi .ji_shi_title {
+  font-size: 100rpx;
+  color: #050000;
+  text-align: center;
+  background-color: #e2e2e2;
+}
+.LunarCalendar .down .ji .ji_shi .ji_shi_conent {
+  background-color: #f8f8f8;
+  height: 300rpx;
+  font-size: 35rpx;
+}
+.LunarCalendar .down .ji .wuxin {
+  background-color: #757575;
+  color: #e6f5e7;
+}
+.LunarCalendar .down .ji .jishen {
+  display: flex;
+}
+.LunarCalendar .down .ji .jishen .xiongshenyiqu {
+  flex: 1;
+}
+.LunarCalendar .down .ji .jishen .xiongshenyiqu .xiongshenyiqu_title {
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: 500;
+  background-color: #e2e2e2;
+  border-right: 1rpx solid #757575;
+}
+.LunarCalendar .down .ji .jishen .xiongshenyiqu .xiongyiqu_conent {
+  border-right: 1rpx solid #757575;
+}
+.LunarCalendar .down .ji .jishen .chongsha {
+  flex: 1;
+}
+.LunarCalendar .down .ji .jishen .chongsha .caishen_title {
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: 500;
+  background-color: #e2e2e2;
+  height: 65rpx;
+}
+.LunarCalendar .down .ji .jishen .chongsha .caishen_conent {
+  font-size: 29rpx;
+}

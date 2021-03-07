@@ -1,0 +1,14 @@
+<view class="getClassifications">
+    <!-- <view class="Classifications_title">垃圾分类查询</view> -->
+    <image class="image" src="https://img.imgdb.cn/item/603f490a360785be54be9d02.png" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+    <view class="Classificationsbtn">
+        <input class="inputname" value="" type="text" placeholder-style="color:white" placeholder="请在此处输入垃圾名" placeholder-class="input-placeholder" maxlength="140" focus="false" bindinput="getname"></input>
+        <button bind:tap="getClassifications" class="getClassifications_btn">查询</button>
+    </view>
+    <view class="Classifications">{{classifications}}</view>
+    <image class="image" src="https://img.imgdb.cn/item/603f4ca7360785be54c057fa.png" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+    <image class="image" src="https://img.imgdb.cn/item/603f4d51360785be54c0a0c8.png" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+    <image class="image" src="https://img.imgdb.cn/item/603f524c360785be54c31ffe.png" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+    <image class="image" src="https://img.imgdb.cn/item/603f5380360785be54c3a87e.png" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+    <image class="image" src="https://img.imgdb.cn/item/603f5563360785be54c4b10b.png" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+</view>

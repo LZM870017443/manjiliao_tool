@@ -1,0 +1,10 @@
+/* pages/about/about.wxss */
+.about .about_title {
+  width: 100vw;
+  font-size: 60rpx;
+  font-weight: 900;
+  text-align: center;
+}
+.about .about_content {
+  text-align: center;
+}

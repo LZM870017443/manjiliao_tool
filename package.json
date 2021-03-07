@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
+    "@miniprogram-component-plus/select-text": "^1.0.1",
     "@miniprogram-component-plus/tabs": "^1.0.0"
   },
   "devDependencies": {},

@@ -1,4 +1,4 @@
-import { getImages } from '../../request/index.js'
+import { getImages, getImagebiyings } from '../../request/index.js'
 Page({
     onShareAppMessage() {
         return {
@@ -10,22 +10,34 @@ Page({
         tabs: [],
         activeTab: 0,
         imageurl: "",
-        indexz: 1
     },
     requestparmas: {
-        msg: ""
+        method: "mobile",
+        lx: "meizi",
+        format: "json"
     },
     // 获取图片
     async getImage() {
         let res = await getImages(this.requestparmas);
-        // console.log(res)
-        res = res.data
-            // console.log(res)
-        let imageurl = res.substring(5, res.length - 1);
+        console.log(res)
+        res = res.data.imgurl
+        let imageurl = res
         this.setData({
                 imageurl
             })
             // console.log(imageurl)
+    },
+    // 获取
+    async getImagebiying() {
+        let res = await getImagebiyings();
+        console.log(res)
+        let imageurl = res.data.data.url
+        imageurl = imageurl.substring(0, imageurl.length - 10)
+            // let imageurl = res
+        this.setData({
+            imageurl
+        })
+        console.log(imageurl)
     },
     // 点击刷新图片
     changimageurl(e) {
@@ -36,25 +48,53 @@ Page({
         })
     },
     onLoad() {
-        const titles = ['美女', '动漫', '风景', '游戏', '文字', '视觉', '情感', '设计', '明星']
+        const titles = ['风景壁纸', '动漫壁纸', '精品壁纸', "随机壁纸"]
         const tabs = titles.map(item => ({ title: item }))
         this.setData({ tabs })
     },
     onShow() {
         // console.log("hahah")
-        let index = this.data.activeTab + 1
-        this.requestparmas.msg = index
-        this.getImage()
+        let index = this.data.activeTab
+        if (index === 0) {
+            this.requestparmas.lx = "fengjing"
+                // this.getImagebiying();
+            this.getImage()
+        }
+        if (index === 1) {
+            this.requestparmas.lx = "dongman";
+            this.getImage()
+        }
+        if (index === 2) {
+            this.requestparmas.lx = "meizi"
+            this.getImage()
+        }
+        if (index === 3) {
+            this.requestparmas.lx = "suiji"
+            this.getImage()
+        }
+        console.log(index)
+            // this.requestparmas.msg = index
+
     },
     // 点击TAB
     onTabClick(e) {
         let index = e.detail.index;
-        this.requestparmas.msg = index + 1
-        let indexz = index + 1
-            // console.log(this.requestparmas.msg)
+        console.log(index)
+        if (index === 0) {
+            this.requestparmas.lx = "fengjing"
+        }
+        if (index === 1) {
+            this.requestparmas.lx = "dongman"
+        }
+        if (index === 2) {
+            this.requestparmas.lx = "meizi"
+        }
+        if (index === 3) {
+            this.requestparmas.lx = "suiji"
+        }
         this.setData({
                 activeTab: index,
-                indexz
+                // indexz
             })
             // console.log(index)
         this.getImage()
@@ -63,13 +103,23 @@ Page({
     onChange(e) {
 
         const index = e.detail.index
+        if (index === 0) {
+            this.requestparmas.lx = "fengjing"
+        }
+        if (index === 1) {
+            this.requestparmas.lx = "dongman"
+        }
+        if (index === 2) {
+            this.requestparmas.lx = "meizi"
+        }
+        if (index === 3) {
+            this.requestparmas.lx = "suiji"
+        }
+        console.log(index)
 
-        this.requestparmas.msg = index + 1
-        let indexz = index + 1
-            // console.log(this.requestparmas.msg)
         this.setData({
                 activeTab: index,
-                indexz
+                // indexz
             })
             // console.log(index)
         this.getImage()
@@ -91,7 +141,9 @@ Page({
                                 scope: 'scope.writePhotosAlbum',
                                 success: () => {
                                     // 同意授权
+                                    console.log(url + "正在下载")
                                     that.saveImgInner(url);
+                                    console.log(url)
                                 },
                                 fail: (result) => {
                                     // console.log(result);
@@ -106,19 +158,20 @@ Page({
                             })
                         } else {
                             // 已经授权了
+                            console.log(url + "正在下载")
                             that.saveImgInner(url);
                         }
 
                     },
                     fail: (res) => {
-                        // console.log(res);
+                        console.log(res);
                     },
                     complete: () => {}
                 });
 
             },
             fail(res) {
-                // console.log(res.errMsg)
+                console.log(res.errMsg)
             }
         })
     },
@@ -131,17 +184,17 @@ Page({
                 wx.saveImageToPhotosAlbum({
                     filePath: path,
                     success: (result) => {
-                        // console.log(result);
+                        console.log(result + "保存成功");
                         wx.showToast({
                             title: '已保存到相册',
                         })
                     },
-                    fail: () => {},
+                    fail: (res) => { console.log(res.errMsg + "保存失败"); },
                     complete: () => {}
                 });
 
             },
-            fail: () => {},
+            fail: (res) => { console.log(res.errMsg + "获取信息失败"); },
             complete: () => {}
         });
 

@@ -1,0 +1,40 @@
+<!-- pages/user/user.wxml -->
+<!-- <navigator class="" target="" url="../login/login" hover-class="navigator-hover" open-type="navigate">
+    登录
+</navigator> -->
+<view class="user">
+  <!-- 用户信息 -->
+  <view class="user_info_wrap">
+    <view class="user_img_wrap" wx:if="{{userInfo.avatarUrl}}">
+      <image class="img_bg" src="{{userInfo.avatarUrl}}" mode="scaleToFill" lazy-load="false" />
+      <view class="user_info">
+        <image class="user_icon" src="{{userInfo.avatarUrl}}"></image>
+        <view class="user_name">{{userInfo.nickName}}</view>
+      </view>
+    </view>
+    <button wx:else class="user_btn" size="default" type="default" hover-stop-propagation="false" open-type="getUserInfo" bindgetuserinfo="handerUserInfo">
+      登入
+    </button>
+  </view>
+  <!-- 内容 -->
+  <view class="user_content">
+    <view class="user_main">
+      <!-- 应用信息相关 -->
+      <view class="app_info_wrap">
+        <button class="app_info_item app_info_contact" size="default" open-type="contact">
+          联系客服
+        </button>
+        <button class="app_info_item app_info_contact" open-type="feedback">意见反馈</button>
+        <navigator url="../about/about" hover-class="navigator-hover" open-type="navigate">
+          <button class="app_info_item app_info_contact">关于我的</button>
+        </navigator>
+        <navigator url="../use/use" hover-class="navigator-hover" open-type="navigate">
+          <button class="app_info_item app_info_contact">使用文档</button>
+        </navigator>
+      </view>
+      <!-- 退出登入 -->
+      <view class="forget" bindtap="forget">退出登入</view>
+    </view>
+    <mp-dialog title="确定是否退出" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}"></mp-dialog>
+  </view>
+</view>

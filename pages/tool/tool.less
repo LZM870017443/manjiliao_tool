@@ -1,125 +1,85 @@
 /* pages/tool/tool.wxss */
-.page{
+.page {
+    // background-image: url(https://api.ixiaowai.cn/mcapi/mcapi.php);
+    // background: rgb(255, 123, 0);
+    // background-size: 100% 100%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    .getClassifications {
-        margin-top: 50rpx;
-        .Classifications_title {
-            text-align: center;
-            font-weight: 900;
-        }
-    
-        .Classificationsbtn {
+    .btnsss {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 750rpx;
+        // background-color: rgb(21, 197, 159);
+        flex-wrap: wrap;
+        // font-size: 100rpx;
+
+
+        .btn {
+            margin: 20rpx;
+            width: 200rpx;
+            height: 200rpx;
             display: flex;
-    
-    
-            .inputname {
-                flex: 4;
-                // border: 1rpx solid black;
-                // border-radius: 15%;
-                border-radius: 10rpx;
-                background: darkgrey;
-                height: auto;
-    
-            }
-    
-            .getClassifications_btn {
-                flex: 2;
-                text-align: center;
-                border-radius: 10rpx;
-                background-color: rgb(185, 238, 165);
-                height: auto;
-            }
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 100rpx;
+            margin-top: 50rpx;
+            border-radius: 25rpx;
+            background-color: #fff;
+            box-shadow:5rpx 5rpx 5rpx #888888;
         }
-    
-        .Classifications {
-            border: 1rpx solid black;
-            width: 100vw;
-            height: 100rpx;
-            font-size: 60rpx;
-            text-align: center;
-            line-height: 100rpx;
-    
+
+        .icon-huanglichaxun {
+            font-size: 100rpx;
+            color: brown;
         }
-    
-    
-    }
-    
-    .LunarCalendar {
-        margin-top: 10rpx;
-    
-        .LunarCalendar_title {
-            text-align: center;
-            font-weight: 900;
+
+        .almanacbtn,.getClassificationsbtn,.idiom,.daikaifa,.Clock {
+            font-size: 30rpx;
+            font-weight: 600;
         }
-    
-        .LunarCalendar_today {
-            display: block;
-            border: 2rpx solid black;
-            line-height: 35rpx;
-            font-size: 35rpx;
-            text-align: center;
+
+        .icon-lajifenlei {
+            font-size: 100rpx;
+            color: rgb(9, 122, 52);
         }
-    }
-    
-    .acrostic {
-        padding-top: 50rpx;
-        .acrostic_title { 
-            text-align: center;
-            font-weight: 900;}
-    
-        .acrostic_input {
-            display:block;
-            margin:0 auto;
-            // text-align: center;
-            width: 95vw;
-            border-radius: 20rpx;
-            // border:1rpx solid black;
-            background: darkgrey;
-            // color: white;
-            height: 60rpx;
-            // width: 95vw;
+
+        .icon-chengyu {
+            font-size: 100rpx;
+            color: #d81e06;
         }
-    
-        .btn1 {
-            display: flex;
-            margin-top: 10rpx;
-            .btn1_1 {
-                flex: 1;
-            }
-    
-            .btn1_2 {
-             
-                flex: 1rpx;
-                padding-left: 30;
-            }
+
+        .icon-daikaifa{
+            font-size: 100rpx;
         }
-    
-        .btn2 {
-            margin-top: 10rpx;
-            display: flex;
-            .btn2_1 { flex: 1;}
-    
-            .btn2_2 { flex: 1;}
+        .icon-jitang{
+            font-size: 100rpx;
+            color: rgb(22, 201, 207);
         }
-    
-        .create {
-            width: 100vw;
+        .icon-lishishangdejintian{
+            font-size: 100rpx;
+            color: rgb(161, 138, 2);
         }
-    
-        .acrostic_content {
-            display: block;
-            border: 1rpx solid black;
-            font-size: 45rpx;
-            text-align: center;
-            height:auto;
-            // line-height: 100rpx;
+        .icon-jiami{
+            font-size: 100rpx;
+            color: rgb(44, 221, 162);
         }
-    }
-    .contact{
-        width: 100vw;
+        .icon-shijian{ font-size: 100rpx;}
+        .icon-190{
+            font-size: 100rpx;
+            color: rgb(221, 44, 44);
+        }
+        .icon-jingmeibizhi{
+            font-size: 100rpx;
+            color: rgb(21, 203, 248);
+        }
+        .icon-bmi{
+            font-size: 100rpx;
+        }
     }
 }

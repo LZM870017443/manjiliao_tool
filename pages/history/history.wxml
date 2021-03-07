@@ -1,0 +1,9 @@
+<scroll-view scroll-y="{{true}}" class="scroll" refresher-threshold="45" scroll-top="{{scrollTop}}">
+    <view class="todaytime">{{todaytime}}</view>
+    <navigator url="/pages/Historical_details/Historical details?title={{item.title}}" hover-class="navigator-hover" open-type="navigate" wx:for="{{historical_event}}" wx:key="index">
+        <view class=" today_content">
+            {{item.year}}年{{item.month}}月{{item.day}}日:{{item.title}}
+        </view>
+    </navigator>
+    <Scorlltop bind:tabItemChang="ChangscrollTop" />
+</scroll-view>

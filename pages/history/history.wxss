@@ -1,0 +1,29 @@
+/* pages/history/history.wxss */
+.todaytime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7c7777;
+  font-size: 40rpx;
+  font-weight: 800;
+  height: 100rpx;
+}
+.today {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40rpx;
+}
+.today_content {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border: 2rpx solid black;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-weight: 550;
+}
+.scroll {
+  width: 100vw;
+  height: 100vh;
+}

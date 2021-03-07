@@ -1,50 +1,63 @@
 // pages/index/index.js
-import { getjoke, getyan, getdays, getdujitang } from '../../request/index.js'
+import { getjoke, getdays, } from '../../request/index.js'
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        tabs: [{
-                id: 0,
-                name: "笑话大全",
-                isActive: true
-            },
-            {
-                id: 2,
-                name: "随机一言",
-                isActive: false
-            },
-            {
-                id: 3,
-                name: "历史上的今天",
-                isActive: false
-            },
+        // tabs: [{
+        //         id: 0,
+        //         name: "笑话大全",
+        //         isActive: true
+        //     },
+        //     {
+        //         id: 2,
+        //         name: "随机一言",
+        //         isActive: false
+        //     },
+        //     {
+        //         id: 3,
+        //         name: "历史上的今天",
+        //         isActive: false
+        //     },
 
-        ],
+        // ],
         joke: [],
         today: [],
-        yan: [],
-        dujitangs: "",
+        // yan: [],
+        // dujitangs: "",
         index: 0,
         todaytime: "",
         historical_event: [],
         isPull: false,
-        scrollTop: 0
+        scrollTop: 0,
+        evt: ""
     },
     requestparmas: {
-        key: "",
-        date: ""
+        pagenum: "1",
+        pagesize: "10",
+        sort: "rand",
+        appkey: "d89a3e9af0d8e97c"
     },
-    // // 返回顶部
-    // scorlltop() {
-    //     wx.pageScrollTo({
-    //         scrollTop: 0,
-    //         duration: 300
-    //     });
+    requestparmas2: {
+        month: "",
+        day: "",
+        appkey: "d89a3e9af0d8e97c"
+    },
+    requestparmas3: {
+        cn_to_unicode: "1",
+        limit: "5",
+        token: "92b52448b8a43d8108340635ffc90d61",
+        datatype: "json",
 
-    // },
+    },
+    handleTap(e) {
+        // console.log('@@ tap', e)
+        this.setData({
+            evt: e
+        })
+    },
     // 点击tab事件
     handerTabItemChang(e) {
         // console.log(e)
@@ -61,8 +74,8 @@ Page({
             that.getjoke()
         }
         if (index === 1) {
-            that.getyans();
-            that.getdujitangs()
+            // that.getyans();
+            // that.getdujitangs()
         }
         if (index === 2) {
             that.gettoday()
@@ -70,11 +83,11 @@ Page({
     },
     // 获取笑话
     async getjoke() {
-        this.requestparmas.key = "b4bc7aa25f44dc4e85bcd6970cd62098"
-        let key = this.requestparmas.key
-        let joke = await getjoke(key);
+        // this.requestparmas.appkey = "d89a3e9af0d8e97c"
+        let joke = await getjoke(this.requestparmas3);
+        // console.log(this.requestparmas)
         // let joke = wx.getStorageSync("joke", joke);
-        joke = joke.data.result
+        joke = joke.data.Result
             // console.log(joke)
         this.setData({
             joke: [...this.data.joke, ...joke]
@@ -90,10 +103,10 @@ Page({
                 isPull: true
             })
             console.log(this.data.isPull)
-            this.requestparmas.key = "b4bc7aa25f44dc4e85bcd6970cd62098"
-            let key = this.requestparmas.key
-            let joke = await getjoke(key);
-            joke = joke.data.result
+                // this.requestparmas.key = "b4bc7aa25f44dc4e85bcd6970cd62098"
+                // let key = this.requestparmas.key
+            let joke = await getjoke(this.requestparmas3);
+            joke = joke.data.Result
             console.log(joke)
             this.setData({
                 joke,
@@ -105,37 +118,21 @@ Page({
         // wx.stopPullDownRefresh()
 
     },
-    // 获取随机一言
-    async getyans() {
-        let yan = await getyan();
-        // console.log(today)
-        yan = yan.data
-        console.log(yan)
-        this.setData({ yan });
-    },
-    // 获取毒鸡汤
-    async getdujitangs() {
-        let dujitangs = await getdujitang();
-        dujitangs = dujitangs.data.data
-        console.log(dujitangs)
-        this.setData({
-            dujitangs
-        })
-    },
     // 获取历史上的今天
     async gettoday() {
-        this.requestparmas.key = "7231e35cf4d5c6f7bdf61ae6918b9495"
         var myDate = new Date();
         let todaytime = myDate.toLocaleDateString();
+        let month = myDate.getMonth() + 1;
+        let day = myDate.getDate()
         let moday = myDate.getFullYear() + "/" + (myDate.getMonth() + 1) + "/" + myDate.getDate();
         moday = moday.substring(5, moday.length)
-            // console.log(moday)
-
-        this.requestparmas.date = moday
-
+        console.log(month, day)
+        this.requestparmas.month = month
+        this.requestparmas.day = day
         let historical_event = await getdays(this.requestparmas);
         // let historical_event = wx.getStorageSync("historical_event", historical_event);
         historical_event = historical_event.data.result
+        wx.setStorageSync("historical_event", historical_event);
         console.log(historical_event)
         this.setData({
                 todaytime,
@@ -156,7 +153,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-
+        this.getjoke();
     },
 
     /**
@@ -170,7 +167,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function() {
-        this.getjoke()
+
 
     },
 
@@ -215,12 +212,6 @@ Page({
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: function() {
-        // console.log("到底了");
-        // let index = this.data.index
-        // console.log(index)
-        // if (index === 0) {
-        //     this.getjoke()
-        // }
 
     },
 

@@ -1,0 +1,51 @@
+<!-- pages/almanac/almanac.wxml -->
+<view class="LunarCalendar">
+    <view class="up">
+        <view class="yangli">
+            公历 {{LunarCalendars.yangli}}  {{LunarCalendars.star}}(阳历)
+        </view>
+        <view class="day">{{day}}</view>
+        <view class="week">星期{{LunarCalendars.week}}</view>
+        <view class="nongli">{{LunarCalendars.nongli}}（阴历）</view>
+        <view class="suici">{{LunarCalendars.suici}}</view>
+        <view class=""> 生肖：{{LunarCalendars.shengxiao}}</view>
+        <view class=""> 吉日：{{LunarCalendars.jiri}}</view>
+    </view>
+    <view class="down">
+        <view class="yi">
+            <view class="yi_shi">
+                <view class="yi_shi_title iconfont icon-yi-"></view>
+                <view class="yi_shi_conent">{{LunarCalendars.yi}}</view>
+            </view>
+            <view class="taishen">  胎神：{{LunarCalendars.taishen}}</view>
+            <view class="yishen">
+                <view class="jishenyiqu">
+                    <view class="jishenyiqu_title"> 吉神宜趋</view>
+                    <view class="jishenyiqu_conent">{{LunarCalendars.jishenyiqu}}</view>
+                </view>
+                <view class="caishen">
+                    <view class="caishen_title"> 财神 喜神 福神</view>
+                    <view class="caishen_conent">{{LunarCalendars.caishen}} {{LunarCalendars.xishen}} {{LunarCalendars.fushen}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="ji">
+            <view class="ji_shi">
+                <view class="ji_shi_title iconfont icon-ji-"></view>
+                <view class="ji_shi_conent">{{LunarCalendars.ji}}</view>
+            </view>
+            <view class="wuxin"> 五行：{{LunarCalendars.wuxing}}</view>
+            <view class="jishen">
+                <view class="xiongshenyiqu">
+                    <view class="xiongshenyiqu_title">凶煞宜忌</view>
+                    <view class="xiongyiqu_conent">{{LunarCalendars.xiongshen}}</view>
+                </view>
+                <view class="chongsha">
+                    <view class="caishen_title">冲煞</view>
+                    <view class="caishen_conent">{{LunarCalendars.chong}}
+        {{LunarCalendars.sha}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

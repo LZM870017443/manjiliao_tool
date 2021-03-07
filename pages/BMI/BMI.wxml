@@ -1,0 +1,41 @@
+<view class="BMI">
+    <!-- <image class="" src="" mode="widthFix" lazy-load="false" binderror="" bindload="" /> -->
+    <view class="BMI_main">
+        <form class="" report-submit="false" bindsubmit="" bindreset="">
+            <view class="BMI_height">
+                <view class="height_title">身高：</view>
+                <input type="digit" class="input_text" bindinput="input_height"></input>
+                <view class="height_tail">厘米(cm)</view>
+            </view>
+            <view class="BMI_weight">
+                <text class="weight_title">体重：</text>
+                <input type="digit" class="input_text" bindinput="input_weight"></input>
+                <text class="weight_tail">千克(kg)</text>
+            </view>
+            <view class="standard">
+                <text class="standard_title">标准：</text>
+                <view class="kong"></view>
+                <!-- <picker class="picker" bindchange="bindPickerChange" value="{{index}}" range="{{array}}"> -->
+                    <view class="picker">{{array[index]}}</view>
+                <!-- </picker> -->
+            </view>
+            <view class="btnsss">
+                <button class="start" size="default" plain="default" hover-class="button-hover" bind:tap="start">
+                    开始计算
+                </button>
+                <button class="reset" size="default" hover-class="button-hover" form-type="reset" bind:tap="reset">
+                    重置
+                </button>
+            </view>
+        </form>
+    </view>
+    <div class="clear">.</div>
+    <view class="bim_number_main">
+        <view class="bim_number">您的BMI值为：{{bim_number}}</view>
+        <view class="state">身体状态：{{state}}</view>
+    </view>
+    <text class="explain">*BMI指数测试适宜人群为年龄在<text class="age">18岁-65岁</text>的人士
+    不适用儿童、青少年、孕妇、老人及运动员等
+    </text>
+    <image class="image" src="https://img.imgdb.cn/item/6040f43b360785be547ceda1.jpg" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+</view>

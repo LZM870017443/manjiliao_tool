@@ -1,0 +1,13 @@
+<!-- pages/Clock/Clock.wxml -->
+<view class="Clock">
+    <view class="motime {{isReversal?'rotatetop':'rotatebutton'}}">{{motime}}
+</view>
+<!-- rotatebutton -->
+</view>
+<!-- 
+    <text class="sss" selectable="false" space="false" decode="false">
+    alpha  {{alpha}}
+    beta{{beta}}
+    gamma{{gamma}}
+    </text>
+   -->

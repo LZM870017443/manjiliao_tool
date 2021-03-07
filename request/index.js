@@ -1,58 +1,54 @@
 import { request } from "../request/ajax.js";
-// let BS_ADS = "https://api-hmugo-web.itheima.net/"
-// let BS_ADSs = "https://www.fastmock.site/mock/c1f9d6ee0f38309571ad35d572a2caa2/weishopping"
 // 获取笑话
-export const getjoke = (key) => request({ url: "http://v.juhe.cn/joke/randJoke.php", data: { key } }).then((result) => {
-    // console.log(result)
+export const getjoke = (requestparmas) => request({ url: "https://api.djapi.cn/joke/get", data: requestparmas, header: { 'content-type': 'text/plain' } }).then((result) => {
+    console.log(requestparmas)
+    return result
+}).catch((err) => {
+    console.log(err)
+});
+// 获取加解密文本
+export const getText = (requestparmas) => request({ url: "https://api.djapi.cn/encrypt/get", data: requestparmas, header: { 'content-type': 'text/plain' } }).then((result) => {
+    console.log(requestparmas)
     return result
 }).catch((err) => {
     console.log(err)
 });
 // 获取随机一言
-export const getyan = () => request({ url: "http://www.moxiya.top/sjyy/api.php" }).then((result) => {
+export const getyan = () => request({ url: "https://abc.mcloc.cn/abc/api/words/" }).then((result) => {
     // console.log(result)
     return result
 }).catch((err) => {
     console.log(err)
 });
 // 获取毒鸡汤
-export const getdujitang = () => request({ url: "http://api.lkblog.net/ws/api.php" }).then((result) => {
+export const getdujitang = () => request({ url: "https://v1.alapi.cn/api/soul" }).then((result) => {
     // console.log(result)
     return result
 }).catch((err) => {
     console.log(err)
 });
 // 获取历史上的今天
-export const getdays = (requestparmas) => request({ url: 'http://v.juhe.cn/todayOnhistory/queryEvent.php', data: requestparmas }).then((result) => {
+export const getdays = (requestparmas) => request({ url: 'https://api.jisuapi.com/todayhistory/query', data: requestparmas }).then((result) => {
     // console.log(result)
-    return result
-}).catch((err) => {
-    console.log(err)
-});
-// 获取历史详情
-export const gethisDeatils = (requestparmas) => request({ url: 'http://v.juhe.cn/todayOnhistory/queryDetail.php', data: requestparmas }).then((result) => {
-    // console.log(requestparmas)
     return result
 }).catch((err) => {
     console.log(err)
 });
 // 获取图片
-export const getImages = (requestparmas) => request({ url: "http://crys.top/api/wallpa.php", data: requestparmas }).then((result) => {
+export const getImages = (requestparmas) => request({ url: "https://api.btstu.cn/sjbz/api.php", data: requestparmas }).then((result) => {
+    return result
+}).catch((err) => {
+    console.log(err)
+});
+// 获取动漫图图片
+export const getImagebiyings = () => request({ url: "https://bing.ioliu.cn/v1/rand?type=json" }).then((result) => {
     // console.log(result)
     return result
 }).catch((err) => {
     console.log(err)
 });
-// 获取音乐
-export const getMusic = () => request({ url: "http://api.wpbom.com/api/neran.php" }).then((result) => {
-    // console.log(result)
-    return result
-}).catch((err) => {
-    console.log(err)
-});
-
 // 获取垃圾分类
-export const getRefuse_classification = (requestparmas) => request({ url: "https://api.66mz8.com/api/garbage.php", data: requestparmas }).then((result) => {
+export const getRefuse_classification = (requestparmas) => request({ url: "https://tenapi.cn/laji/", data: requestparmas }).then((result) => {
     // console.log(goods_id)
     return result
 }).catch((err) => {
@@ -60,14 +56,14 @@ export const getRefuse_classification = (requestparmas) => request({ url: "https
 });
 
 // 获取今天农历信息
-export const getLunarCalendar = () => request({ url: "http://crys.top/api/nlrq.php" }).then((result) => {
+export const getLunarCalendar = (requestparmas) => request({ url: "https://api.jisuapi.com/huangli/date", data: requestparmas }).then((result) => {
     // console.log(result)
     return result
 }).catch((err) => {
     console.log(err)
 });
 // 获取藏头诗
-export const getAcrostic = (requestparmas) => request({ url: "http://crys.top/api/betan.php", data: requestparmas }).then((result) => {
+export const getIdiom = (requestparmas) => request({ url: "https://api.jisuapi.com/chengyu/detail", data: requestparmas }).then((result) => {
     // console.log(result)
     return result
 }).catch((err) => {

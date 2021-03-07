@@ -1,5 +1,3 @@
 {
-    "usingComponents": {
-        "mp-select-text": "@miniprogram-component-plus/select-text"
-    }
+    "usingComponents": {}
 }

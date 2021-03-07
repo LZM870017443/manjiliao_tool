@@ -1,0 +1,60 @@
+.page {
+  background-color: #f2d28c;
+}
+.Idiom {
+  position: relative;
+  background-color: #f2d28c;
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 100vh;
+}
+.Idiom .getIdiom_title {
+  text-align: center;
+  font-weight: 900;
+}
+.Idiom .getIdiomInputOrBtn {
+  display: flex;
+}
+.Idiom .getIdiomInputOrBtn .inputIdiom {
+  flex: 4;
+  display: block;
+  border-radius: 10rpx;
+  background: #e2e2e2;
+  height: auto;
+}
+.Idiom .getIdiomInputOrBtn .input-placeholder {
+  text-align: center;
+}
+.Idiom .getIdiomInputOrBtn .Idiom_btn {
+  flex: 2;
+  text-align: center;
+  line-height: 100rpx;
+  border-radius: 10rpx;
+  background-color: #ada201;
+  height: 100rpx;
+  width: 90vw;
+  color: #fff;
+  box-shadow: 5rpx 5rpx 5rpx #888888;
+}
+.Idiom .getIdiomInputOrBtn .button-hover {
+  background-color: #69630f;
+  color: #fffbf3;
+}
+.Idiom .Idiomjieshi {
+  font-weight: 700;
+}
+.Idiom .Idiomjieshi .idiom_name {
+  text-align: center;
+  margin-top: 50rpx;
+  font-weight: 900;
+  color: red;
+}
+.Idiom .Idiomjieshi .idiom_pronounce {
+  text-align: center;
+}
+.Idiom .Idiomjieshi .idiom_content {
+  margin-top: 50rpx;
+}
+.Idiom .Idiomjieshi .solid {
+  border-bottom: 1rpx solid #999999;
+}

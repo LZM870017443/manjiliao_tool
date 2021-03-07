@@ -1,0 +1,10 @@
+<view class="about">
+    <view class="about_title">公告</view>
+    <view class="about_content">
+        <text class="" selectable="false" space="false" decode="false">本小程序是本人学习练习之作，
+            小程序的接口及图片等都是由网上搜罗所得，
+            如果有侵犯之嫌，
+            请联系客服。
+            谢谢！！！</text>
+    </view>
+</view>

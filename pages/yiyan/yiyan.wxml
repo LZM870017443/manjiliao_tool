@@ -1,0 +1,11 @@
+<view bindtap="handleTap">
+    <view class="yan" bindtap="getyans">
+    <!-- <text selectable="ture">{{yan}}</text> -->
+    <mp-select-text show-copy-btn placement="bottom" value="{{yan}}" data-id="{{index}}" bindcopy="onCopy" on-document-tap="{{evt}}" ></mp-select-text>
+</view>
+<view class="dujitang" bindtap="getdujitangs">
+    <!-- <text selectable="ture">{{dujitangs.title}}</text> -->
+    <mp-select-text show-copy-btn placement="bottom" value="{{dujitangs.title}}" data-id="{{index}}" bindcopy="onCopy" on-document-tap="{{evt}}"></mp-select-text>
+</view>
+</view>
+  

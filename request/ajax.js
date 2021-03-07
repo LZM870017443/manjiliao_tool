@@ -1,25 +1,19 @@
 let ajaxnum = 0;
 export const request = (params) => {
     ajaxnum++
-    let header = {...params.header };
-    if (params.url.includes("/my/")) {
-        // 拼接header 带上token
-        header["Authorization"] = wx.getStorageSync("token");
-    }
-
     wx.showLoading({
         title: "正在加载中",
         mask: true,
     });
 
     return new Promise((res, rej) => {
-
         wx.request({
             ...params,
-            header: header,
+            // header: header,
             success: (result) => {
                 res(result);
                 console.log(result)
+
             },
             fail: (err) => {
                 rej(err), console.log(err);

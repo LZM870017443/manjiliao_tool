@@ -1,0 +1,134 @@
+page {
+  background-color: #eeeeee;
+}
+.BMI {
+  position: relative;
+}
+.BMI .BMI_main {
+  margin-top: 50rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
+  background-color: #fff;
+  border-radius: 25rpx;
+  padding-top: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.BMI .BMI_main .BMI_height {
+  display: flex;
+  margin-top: 50rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 1rpx solid #cfcfcf;
+  text-align: center;
+}
+.BMI .BMI_main .BMI_height .height_title {
+  flex: 1;
+  font-size: 35rpx;
+}
+.BMI .BMI_main .BMI_height .input_text {
+  flex: 1.5;
+  background-color: #cccccc;
+  margin-right: 10rpx;
+}
+.BMI .BMI_main .BMI_height .height_tail {
+  flex: 1;
+  font-size: 35rpx;
+}
+.BMI .BMI_main .BMI_weight {
+  display: flex;
+  margin-top: 50rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 1rpx solid #cfcfcf;
+  text-align: center;
+}
+.BMI .BMI_main .BMI_weight .weight_title {
+  flex: 1;
+  font-size: 35rpx;
+}
+.BMI .BMI_main .BMI_weight .input_text {
+  flex: 1.5;
+  background-color: #cccccc;
+  margin-right: 10rpx;
+}
+.BMI .BMI_main .BMI_weight .weight_tail {
+  flex: 1;
+  font-size: 35rpx;
+}
+.BMI .BMI_main .standard {
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10rpx;
+  border-bottom: 1rpx solid #cfcfcf;
+}
+.BMI .BMI_main .standard .standard_title {
+  text-align: center;
+  flex: 1;
+}
+.BMI .BMI_main .standard .kong {
+  flex: 1.5;
+}
+.BMI .BMI_main .standard .picker {
+  flex: 1;
+}
+.BMI .BMI_main .btnsss {
+  display: flex;
+  margin-top: 30rpx;
+  padding-bottom: 30rpx;
+}
+.BMI .BMI_main .btnsss .start {
+  height: 80rpx;
+  width: 400rpx;
+  line-height: 80rpx;
+  background-color: #daa025;
+  margin-right: 30rpx;
+}
+.BMI .BMI_main .btnsss .reset {
+  height: 80rpx;
+  width: 200rpx;
+  line-height: 80rpx;
+}
+.BMI .clear {
+  clear: both;
+}
+.BMI .bim_number_main {
+  width: 90vw;
+  background-color: #fff;
+  border-radius: 25rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 520rpx;
+}
+.BMI .bim_number_main .bim_number {
+  padding-left: 50rpx;
+}
+.BMI .bim_number_main .state {
+  padding-left: 50rpx;
+}
+.BMI .explain {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 700rpx;
+  width: 90vw;
+  background-color: #fff;
+  border-radius: 25rpx;
+  font-size: 30rpx;
+  color: #999494;
+}
+.BMI .explain .age {
+  color: #ff660d;
+}
+.BMI image {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 820rpx;
+  width: 90vw;
+  border-radius: 25rpx;
+  background-color: #fff;
+}

@@ -17,5 +17,5 @@
       </view>     
     </block>
   </mp-tabs>
-   <Refresh indexz="{{indexz}}" bind:imageurl="changimageurl"/>
+   <Refresh activeTab="{{activeTab}}" bind:imageurl="changimageurl"/>
   </view>

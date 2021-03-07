@@ -1,101 +1,78 @@
 /* pages/tool/tool.wxss */
 .page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page .btnsss {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 750rpx;
+  flex-wrap: wrap;
+}
+.page .btnsss .btn {
+  margin: 20rpx;
+  width: 200rpx;
+  height: 200rpx;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.page .getClassifications {
+  font-size: 100rpx;
   margin-top: 50rpx;
+  border-radius: 25rpx;
+  background-color: #fff;
+  box-shadow: 5rpx 5rpx 5rpx #888888;
 }
-.page .getClassifications .Classifications_title {
-  text-align: center;
-  font-weight: 900;
+.page .btnsss .icon-huanglichaxun {
+  font-size: 100rpx;
+  color: brown;
 }
-.page .getClassifications .Classificationsbtn {
-  display: flex;
+.page .btnsss .almanacbtn,
+.page .btnsss .getClassificationsbtn,
+.page .btnsss .idiom,
+.page .btnsss .daikaifa,
+.page .btnsss .Clock {
+  font-size: 30rpx;
+  font-weight: 600;
 }
-.page .getClassifications .Classificationsbtn .inputname {
-  flex: 4;
-  border-radius: 10rpx;
-  background: darkgrey;
-  height: auto;
+.page .btnsss .icon-lajifenlei {
+  font-size: 100rpx;
+  color: #097a34;
 }
-.page .getClassifications .Classificationsbtn .getClassifications_btn {
-  flex: 2;
-  text-align: center;
-  border-radius: 10rpx;
-  background-color: #b9eea5;
-  height: auto;
+.page .btnsss .icon-chengyu {
+  font-size: 100rpx;
+  color: #d81e06;
 }
-.page .getClassifications .Classifications {
-  border: 1rpx solid black;
-  width: 100vw;
-  height: 100rpx;
-  font-size: 60rpx;
-  text-align: center;
-  line-height: 100rpx;
+.page .btnsss .icon-daikaifa {
+  font-size: 100rpx;
 }
-.page .LunarCalendar {
-  margin-top: 10rpx;
+.page .btnsss .icon-jitang {
+  font-size: 100rpx;
+  color: #16c9cf;
 }
-.page .LunarCalendar .LunarCalendar_title {
-  text-align: center;
-  font-weight: 900;
+.page .btnsss .icon-lishishangdejintian {
+  font-size: 100rpx;
+  color: #a18a02;
 }
-.page .LunarCalendar .LunarCalendar_today {
-  display: block;
-  border: 2rpx solid black;
-  line-height: 35rpx;
-  font-size: 35rpx;
-  text-align: center;
+.page .btnsss .icon-jiami {
+  font-size: 100rpx;
+  color: #2cdda2;
 }
-.page .acrostic {
-  padding-top: 50rpx;
+.page .btnsss .icon-shijian {
+  font-size: 100rpx;
 }
-.page .acrostic .acrostic_title {
-  text-align: center;
-  font-weight: 900;
+.page .btnsss .icon-190 {
+  font-size: 100rpx;
+  color: #dd2c2c;
 }
-.page .acrostic .acrostic_input {
-  display: block;
-  margin: 0 auto;
-  width: 95vw;
-  border-radius: 20rpx;
-  background: darkgrey;
-  height: 60rpx;
+.page .btnsss .icon-jingmeibizhi {
+  font-size: 100rpx;
+  color: #15cbf8;
 }
-.page .acrostic .btn1 {
-  display: flex;
-  margin-top: 10rpx;
-}
-.page .acrostic .btn1 .btn1_1 {
-  flex: 1;
-}
-.page .acrostic .btn1 .btn1_2 {
-  flex: 1rpx;
-  padding-left: 30;
-}
-.page .acrostic .btn2 {
-  margin-top: 10rpx;
-  display: flex;
-}
-.page .acrostic .btn2 .btn2_1 {
-  flex: 1;
-}
-.page .acrostic .btn2 .btn2_2 {
-  flex: 1;
-}
-.page .acrostic .create {
-  width: 100vw;
-}
-.page .acrostic .acrostic_content {
-  display: block;
-  border: 1rpx solid black;
-  font-size: 45rpx;
-  text-align: center;
-  height: auto;
-}
-.page .contact {
-  width: 100vw;
+.page .btnsss .icon-bmi {
+  font-size: 100rpx;
 }

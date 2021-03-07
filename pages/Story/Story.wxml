@@ -1,22 +1,30 @@
 <!-- pages/index/index.wxml -->
-<Tabr tabs="{{tabs}}" bind:tabItemChang="handerTabItemChang" class="tabs">
-    <block wx:if="{{tabs[0].isActive}}">
-        <scroll-view scroll-y="{{true}}" class="scroll" bindscrolltolower="bindscrolltolower" refresher-enabled="{{true}}" refresher-threshold="45" bindrefresherrefresh="bindrefresherrefresh" refresher-triggered="{{isPull}}" scroll-top="{{scrollTop}}">
-            <!-- <text selectable="ture" class="joke">阿松大建行的卡岁的卡卡记得哈记得哈克的阿加达斯肯定就爱上了空间的拉升阶段拉萨</text> -->
-               <text selectable="ture" class="joke" wx:for="{{joke}}" wx:key="hashId">{{item.content}}</text>
-        </scroll-view>
-        <Scorlltop bind:tabItemChang="ChangscrollTop" />
-    </block>
+<!-- <Tabr tabs="{{tabs}}" bind:tabItemChang="handerTabItemChang" class="tabs">
+    
+    <block wx:if="{{tabs[0].isActive}}"> -->
+<view class="tabs" bindtap="handleTap">
+    <scroll-view scroll-y="{{true}}" class="scroll" bindscrolltolower="bindscrolltolower" refresher-enabled="{{true}}" refresher-threshold="45" bindrefresherrefresh="bindrefresherrefresh" refresher-triggered="{{isPull}}" scroll-top="{{scrollTop}}">
+        <!-- <text selectable="ture" class="joke" wx:for="{{joke}}" wx:key="hashId">{{item.content}}</text> -->
+        <block wx:for="{{joke}}" wx:key="hashId">
+              <mp-select-text 
+          show-copy-btn 
+          placement="bottom" 
+          value="{{item.content}}" 
+          data-id="{{index}}" 
+          bindcopy="onCopy"
+          on-document-tap="{{evt}}"
+          class="joke"
+        >
 
+        </mp-select-text>
+        </block>
+          
+    </scroll-view>
+    <Scorlltop bind:tabItemChang="ChangscrollTop" />
+</view>
+<!-- </block> -->
+<!-- <block wx:elif="{{tabs[1].isActive}}">
 
-    <block wx:elif="{{tabs[1].isActive}}">
-        <view class="yan" bindtap="getyans">
-            <text selectable="ture">{{yan}}</text>
-        </view>
-        <view class="dujitang" bindtap="getdujitangs">
-            <text selectable="ture">{{dujitangs}}</text>
-        </view>
-        <!-- <button class="btn1" type="primary" plain="{{ture}}" >再来一句老鸡汤</button> -->
     </block>
 
 
@@ -25,12 +33,7 @@
         class="scroll" 
         refresher-threshold="45" 
         scroll-top="{{scrollTop}}">
-            <view class="todaytime">{{todaytime}}</view>
-            <navigator url="/pages/Historical_details/Historical details?e_id={{item.e_id}}" hover-class="navigator-hover" open-type="navigate" wx:for="{{historical_event}}" wx:key="{{item.e_id}}">
-                <!-- <text class="today_time">{{item.date}}</text> -->
-                <view class=" today_content">{{item.date}}:{{item.title}}</view>
-            </navigator>
-            <Scorlltop bind:tabItemChang="ChangscrollTop" />
+       
         </scroll-view>
-    </block>
-</Tabr>
+    </block> -->
+<!-- </Tabr> -->

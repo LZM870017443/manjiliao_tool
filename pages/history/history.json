@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "Scorlltop": "../../Component/Scorlltop/Scorlltop"
+    },
+    "navigationBarTitleText": "今日历史"
+}

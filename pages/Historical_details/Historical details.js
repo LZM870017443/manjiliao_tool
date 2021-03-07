@@ -6,37 +6,51 @@ Page({
      * 页面的初始数据
      */
     data: {
-        hisDeatil: [],
-        lz_load: 'https://img.imgdb.cn/item/603642ae5f4313ce252a6ec5.gif'
+        // hisDeatil: [],
+        lz_load: 'https://img.imgdb.cn/item/603642ae5f4313ce252a6ec5.gif',
+        title: "",
+        historical_event: [],
+        content: ""
     },
-    requestparmas: {
-        key: "7231e35cf4d5c6f7bdf61ae6918b9495",
-        e_id: ""
-    },
+    // requestparmas: {
+    //     key: "7231e35cf4d5c6f7bdf61ae6918b9495",
+    //     e_id: ""
+    // },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
 
-        let e_id = options.e_id
-        this.requestparmas.e_id = e_id
-        console.log(e_id)
+        let title = options.title;
+        this.setData({
+            title
+        })
+        let historical_event = wx.getStorageSync("historical_event", historical_event);
+        this.setData({
+                historical_event
+            })
+            // console.log(historical_event)
     },
     async gethisDeatil() {
-        let hisDeatil = await gethisDeatils(this.requestparmas);
-        // let hisDeatil = wx.getStorageSync("hisDeatil", hisDeatil);
-        hisDeatil = hisDeatil.data.result[0]
-            // wx.setStorageSync("hisDeatil", hisDeatil);
+        this.data.historical_event.forEach(v => {
+            if (v.title === this.data.title) {
+                console.log(v.content)
+                this.setData({
+                    content: v.content
+                })
+            }
 
-        console.log(hisDeatil)
-        this.setData({
-            hisDeatil
-        })
+
+        });
+
+
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function() {
+        // wx.getStorageSync(historical_event);
+
 
     },
 
@@ -44,7 +58,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function() {
-        this.gethisDeatil()
+        this.gethisDeatil();
     },
 
     /**

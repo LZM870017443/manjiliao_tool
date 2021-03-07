@@ -1,0 +1,9 @@
+/* pages/use/use.wxss */
+.use .Scorlltop .image {
+  width: 50rpx;
+  height: 50rpx;
+}
+.use .Refresh .image {
+  width: 50rpx;
+  height: 50rpx;
+}

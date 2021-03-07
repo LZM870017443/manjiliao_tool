@@ -1,0 +1,23 @@
+<view class="Idiom">
+    <!-- <view class="getIdiom_title">成语查询</view> -->
+    <view class="getIdiomInputOrBtn">
+        <input class="inputIdiom" type="text" placeholder-style="color:white" placeholder="请输入成语" placeholder-class="input-placeholder" maxlength="4" focus="false" bindinput="getIdiom"></input>
+        <!-- <view bind:tap="getIdiomjieshi" class="Idiom_btn">查询</view> -->
+        <button class="Idiom_btn" size="default" hover-class="button-hover" bind:tap="getIdiomjieshi">
+            查询
+        </button>
+    </view>
+    <!-- <text class="" selectable="false" space="false" decode="false">
+        名称：{{Idiomjieshi.name}}
+    </text> -->
+    <text class="Idiomjieshi" wx:if="{{Idiomjieshi.status!=0}}">{{Idiomjieshi.msg}}</text>
+    <view class="Idiomjieshi" wx:else>
+        <view class="idiom_name ">{{Idiomjieshi.result.name}}</view>
+        <view class="idiom_pronounce ">{{Idiomjieshi.result.pronounce}}</view>
+        <view class="idiom_content solid">解释：<text class="content_title"></text> {{Idiomjieshi.result.comefrom}}</view>
+        <view class="idiom_comefrom solid">出自：{{Idiomjieshi.result.comefrom}}</view>
+        <view class="idiom_antonym solid">反义词：{{Idiomjieshi.result.antonym}}</view>
+        <view class="idiom_thesaurus solid">近义词：{{Idiomjieshi.result.thesaurus}}</view>
+        <view class="idiom_example solid">例子：{{Idiomjieshi.result.example}}</view>
+    </view>
+</view>

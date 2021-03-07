@@ -1,0 +1,98 @@
+.user {
+    // background-color: #edece8;
+    // background-image: url(https://api.ixiaowai.cn/mcapi/mcapi.php);
+    // background-size: 100% 100%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.user_info_wrap {
+    height: 45vh;
+    overflow: hidden;
+    position: relative;
+
+    .user_img_wrap {
+        position: relative;
+
+        .img_bg {
+            width: 100vw;
+            height: 50vh;
+            filter: blur(15rpx);
+        }
+
+        .user_info {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 20%;
+            text-align: center;
+
+            .user_icon {
+                width: 150rpx;
+                height: 150rpx;
+                border-radius: 50%;
+            }
+
+            .user_name {
+                color: #fff;
+                margin-top: 40rpx;
+                font-size: 50rpx;
+            }
+        }
+    }
+
+
+}
+
+.user_btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 40%;
+    // border: 1rpx solid greenyellow;
+    color: greenyellow;
+    font-size: 38rpx;
+    padding: 30rpx;
+    border-radius: 10rpx;
+}
+
+.user_content {
+    position: relative;
+
+    .user_main {
+        padding-bottom: 100rpx;
+        color: #666;
+        position: absolute;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -40rpx;
+
+        .app_info_wrap {
+            margin-top: 30rpx;
+            // background-color: #fff;
+
+            .app_info_item {
+                border-bottom: 1rpx solid #ccc;
+            }
+
+            .app_info_contact {
+                width: 100%;
+                font-size: 40rpx;
+                background-color: #fff;
+                color: #666;
+                display: flex;
+                justify-content: space-between;
+
+            }
+        }
+
+        .forget {
+            margin-top: 50rpx;
+            background-color: #fff;
+            padding: 20rpx;
+            border: 1rpx solid red;
+            color: red;
+        }
+    }
+}
