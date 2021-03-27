@@ -16,7 +16,7 @@ Page({
         lx: "meizi",
         format: "json"
     },
-    // 获取图片
+    // 获取 图片
     async getImage() {
         let res = await getImages(this.requestparmas);
         console.log(res)
